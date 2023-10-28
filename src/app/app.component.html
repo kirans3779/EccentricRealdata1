@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="wrapper">
+  <h2> RealTime Data</h2>
+    <div class="wrapper-inner">
+      <label for="">Type Here</label>
+      <input [(ngModel)]="messageInput" (keyup.enter)="sendMessage()" placeholder="Type a message" class="form-control"/>
+     <div class="btn">
+      <button (click)="sendMessage()" class="btn-send">Send</button>
+     </div>
+    </div>
+    <ul>
+     
+      <li *ngFor="let message of messages" class="list-view">{{ message }}</li>
+    </ul>
+  </div>
+
+  
+</div>
+
+
